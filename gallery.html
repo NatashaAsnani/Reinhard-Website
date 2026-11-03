@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FFFDF9;">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="./images/Gemini_Generated_Image_94er6u94er6u94er-removebg-preview.png" alt="" width="180px">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="index.html" style="color: #7A4A32;">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html" style="color: #7A4A32 !important;">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="experience.html" style="color: #7A4A32 !important;">Experience</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="gallery.html" style="color: #7A4A32 !important;">Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="milestones.html" style="color: #7A4A32 !important;">Milestones</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="testimonials.html" style="color: #7A4A32 !important;">My Gratitude</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html" style="color: #7A4A32 !important;">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row mt-5">
+            <div class="d-flex justify-content-between align-items-center">
+                <h1 class="m-0" style="color: #650D12; font-weight: bold;">Discover my Work</h1>
+            </div>
+            <p class="fw-semibold mt-2">Where Creativity meets Passion.</p>
+        </div>
+
+        <!-- Category tabs -->
+        <div class="row">
+            <div class="gallery-filters d-flex flex-wrap gap-2 my-3">
+                <button class="filter-btn active" data-filter="cakes-tarts">Cakes &amp; Tarts</button>
+                <button class="filter-btn" data-filter="plated-desserts">Plated Desserts</button>
+                <button class="filter-btn" data-filter="collections">Collections</button>
+                <button class="filter-btn" data-filter="seasonal">Seasonal</button>
+            </div>
+        </div>
+
+        <!-- Gallery -->
+        <div class="row">
+            <div class="row row-cols-1 row-cols-md-3 g-4 nested-row" id="gallery">
+
+                <div class="col gallery-item" data-category="cakes-tarts">
+                    <div class="card h-100">
+                        <div class="img-wrap">   
+                            <img src="./images/pastry1.jpg" class="card-img-top" alt="Black Forest Cake">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Black Forest Cake</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col gallery-item" data-category="cakes-tarts">
+                    <div class="card h-100">
+                        <div class="img-wrap">
+                            <img src="./images/Raspberry Mascarpone Breton Tart.jpg" class="card-img-top" alt="Raspberry Mascarpone Breton Tart">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Raspberry Mascarpone Breton Tart</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col gallery-item" data-category="cakes-tarts">
+                    <div class="card h-100">
+                        <div class="img-wrap">
+                            <img src="./images/Pistachio & Hazelnut Chocolate Delight(1).jpg" class="card-img-top" alt="Pistachio & Hazelnut Chocolate Delight">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Pistachio & Hazelnut Chocolate Delight</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col gallery-item" data-category="cakes-tarts">
+                    <div class="card h-100">
+                        <div class="img-wrap">
+                            <img src="./images/Lemon Meringue Breton Tart(1).jpg" class="card-img-top" alt="Lemon Meringue Breton Tart">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Lemon Meringue Breton Tart</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col gallery-item" data-category="cakes-tarts">
+                    <div class="card h-100">
+                        <div class="img-wrap">
+                            <img src="./images/Green Apple &  Caramel Breton Tart.jpg" class="card-img-top" alt="Green Apple &  Caramel Breton Tart">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Green Apple &  Caramel Breton Tart</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col gallery-item" data-category="cakes-tarts">
+                    <div class="card h-100">
+                        <div class="img-wrap">
+                            <img src="./images/Strawberry Elegance (1).jpg" class="card-img-top" alt="Strawberry Elegance">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Strawberry Elegance</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col gallery-item" data-category="plated-desserts">
+                    <div class="card h-100">
+                        <div class="img-wrap">
+                            <img src="./images/White Chocolate, Citrus Curd, Vanilla Mascarpone.jpeg" class="card-img-top" alt="White Chocolate, Citrus Curd, Vanilla Mascarpone">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">White Chocolate, Citrus Curd, Vanilla Mascarpone</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col gallery-item" data-category="plated-desserts">
+                    <div class="card h-100">
+                        <div class="img-wrap">
+                            <img src="./images/Textured Strawberry Tart, Greek Yoghurt Sorbet.jpeg" class="card-img-top" alt="Textured Strawberry Tart, Greek Yoghurt Sorbet">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Textured Strawberry Tart, Greek Yoghurt Sorbet</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col gallery-item" data-category="plated-desserts">
+                    <div class="card h-100">
+                        <div class="img-wrap">
+                            <img src="./images/Raspberry Meringue Tart, Raspberry Ice Cream.jpeg" class="card-img-top" alt="Raspberry Meringue Tart, Raspberry Ice Cream">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Raspberry Meringue Tart, Raspberry Ice Cream</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col gallery-item" data-category="plated-desserts">
+                    <div class="card h-100">
+                        <div class="img-wrap">
+                            <img src="./images/Creme Brulle, Green Apple textures and Sorbet.jpeg" class="card-img-top" alt="Creme Brulle, Green Apple textures and Sorbet">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Creme Brulle, Green Apple textures and Sorbet</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col gallery-item" data-category="plated-desserts">
+                    <div class="card h-100">
+                        <div class="img-wrap">
+                            <img src="./images/Chocolate Cremeux, Morello Cherry Compote, Vanilla Gel.jpeg" class="card-img-top" alt="Chocolate Cremeux, Morello Cherry Compote, Vanilla Gel">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Chocolate Cremeux, Morello Cherry Compote, Vanilla Gel</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col gallery-item" data-category="plated-desserts">
+                    <div class="card h-100">
+                        <div class="img-wrap">
+                            <img src="./images/Bitter Chocolate Sphere, Peanut Brittle, Tangerine Peel Ice Cream.jpeg" class="card-img-top" alt="Bitter Chocolate Sphere, Peanut Brittle, Tangerine Peel Ice Cream">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Bitter Chocolate Sphere, Peanut Brittle, Tangerine Peel Ice Cream</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col gallery-item" data-category="collections">
+                    <div class="card h-100">
+                        <div class="img-wrap">
+                            <img src="./images/Glass Desserts (1).jpg" class="card-img-top" alt="Glass Desserts">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Glass Desserts</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col gallery-item" data-category="collections">
+                    <div class="card h-100">
+                        <div class="img-wrap">
+                            <img src="./images/Forest Berries.PNG" class="card-img-top" alt="Forest Berries">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Forest Berries</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col gallery-item" data-category="collections">
+                    <div class="card h-100">
+                        <div class="img-wrap">
+                            <img src="./images/Eclairs.jpg" class="card-img-top" alt="Eclairs">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Eclairs</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col gallery-item" data-category="collections">
+                    <div class="card h-100">
+                        <div class="img-wrap">
+                            <img src="./images/Autumn Flavors.jpg" class="card-img-top" alt="Autumn Flavors">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Autumn Flavors</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col gallery-item" data-category="seasonal">
+                    <div class="card h-100">
+                        <div class="img-wrap">
+                            <img src="./images/Christmas Santa Claus.jpg" class="card-img-top" alt="Christmas Santa Claus">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Christmas Santa Claus</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col gallery-item" data-category="seasonal">
+                    <div class="card h-100">
+                        <div class="img-wrap">
+                            <img src="./images/Pink October (1).jpg" class="card-img-top" alt="Pink October">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Pink October</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col gallery-item" data-category="seasonal">
+                    <div class="card h-100">
+                        <div class="img-wrap">
+                            <img src="./images/Christmas Ornaments.jpg" class="card-img-top" alt="Christmas Ornaments">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Christmas Ornaments</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col gallery-item" data-category="seasonal">
+                    <div class="card h-100">
+                        <div class="img-wrap">
+                            <img src="./images/Cartier Cake.PNG" class="card-img-top" alt="Cartier Cake">
+                        </div>
+                        <div class="card-body">
+                            <h4 class="card-title">Cartier Cake</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Baqi pictures bhi isi tarah, bas data-category change karo -->
+
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="mt-5">
+        <div class="container-fluid">
+            <div class="row footer-row">
+                <div class="col-md-3 col-sm-6">
+                    <img src="./images/footer-logo.png" alt="" width="150px" class="logo-light">
+                    <!-- <h3 class="mb-3">About Me</h3> -->
+                    <p class="mt-4" style="color: #E8D7C2 !important;">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam vitae voluptates quibusdam non doloribus neque.</p>
+                    <div class="mt-3">
+                        <a href="#" class="me-2 text-decoration-none"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="me-2 text-decoration-none"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="me-2 text-decoration-none"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="me-2 text-decoration-none"><i class="fas fa-envelope"></i></a>
+                        <a href="#" class="text-decoration-none"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <!-- Column 2: Quick Links -->
+                <div class="col-md-3 col-sm-6 mb-4 footer-links">
+                    <h3 class="mb-3 fw-bold" style="color: #F5EFE5 !important;">Quick Links</h3>
+                    <ul class="list-unstyled ps-0">
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Lorem ipsum</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Lorem ipsum</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Lorem ipsum</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Lorem ipsum</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Lorem ipsum</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Lorem ipsum</a></li>
+                    </ul>
+                </div>
+                <!-- Column 3: Services -->
+                <div class="col-md-3 col-sm-6 mb-4 service-info">
+                    <h3 class="mb-3 fw-bold" style="color: #F5EFE5 !important;">Services</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Lorem ipsum</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Lorem ipsum</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Lorem ipsum</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Lorem ipsum</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none">Lorem ipsum</a></li>
+                    </ul>
+                </div>
+                <!-- Column 4: Contact Info -->
+                <div class="col-md-3 col-sm-6 mb-4 contact-info">
+                    <h3 class="mb-3 fw-bold" style="color: #F5EFE5 !important;">Contact Info</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <i class="fas fa-envelope me-2" style="color: #B87342;"></i>
+                            <a href="#" class="text-decoration-none">reinilac@gmail.com</a>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-phone me-2" style="color: #B87342;"></i>
+                            <a href="#" class="text-decoration-none">+222 14534 923</a>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fab fa-whatsapp me-2" style="color: #B87342;"></i>
+                            <a href="#" class="text-decoration-none">WhatsApp</a>
+                        </li>
+                        <li class="mb-2">
+                            <i class="fas fa-map-marker-alt me-2" style="color: #B87342;"></i>
+                            <span>Karachi, Pakistan</span>
+                        </li>
+                    </ul>
+                </div>
+            <!-- </div> -->
+
+                <!-- Copyright Row -->
+                <div class="row mt-3">
+                    <div class="col-12 text-center border-top border-white pt-3">
+                        <p class="small mb-0">&copy; Powered by Natasha Asnani. All rights reserved.</p>
+                        <!-- <p class="small mb-0">&copy; 2026 Reinhard Lackner. All rights reserved.</p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+<script>
+    lucide.createIcons();
+</script>
+
+
+<script>
+    const buttons = document.querySelectorAll('.filter-btn');
+    const items = document.querySelectorAll('.gallery-item');
+
+    function filterGallery(category) {
+        items.forEach(item => {
+            item.style.display = item.dataset.category === category ? '' : 'none';
+        });
+    }
+
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            buttons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            filterGallery(btn.dataset.filter);
+        });
+    });
+
+    // Page load pe pehli category dikhao
+    filterGallery('cakes-tarts');
+</script>
+</body>
+</html>
