@@ -36,7 +36,7 @@
                                 <a class="nav-link" href="gallery.html" style="color: #7A4A32 !important;">Gallery</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="milestone.html" style="color: #7A4A32 !important;">Milestones</a>
+                                <a class="nav-link" href="milestones.html" style="color: #7A4A32 !important;">Milestones</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="testimonials.html" style="color: #7A4A32 !important;">My Gratitude</a>
@@ -235,31 +235,58 @@
 
             <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
                 <div class="col">
-                    <div class="cert-card h-100 text-center">
-                        <img src="./images/Global Swiss Learning Logo.jpg" alt="Institute name" class="cert-logo">
-                        <h5 class="cert-title">Pastry Trainer Certificate</h5>
-                        <p class="cert-meta mb-0">GLOBAL SWISS LEARNING</p>
-                        <p class="cert-meta">January 21, 2025 </p>
+                    <div class="cert-card h-100 text-center" style="cursor: pointer;"
+                        data-bs-toggle="modal" data-bs-target="#certModal"
+                        data-full="./images/GSL Pastry Trainer - Oct 9 2025 - 5-28 PM_page-0001.jpg">
+                        <img src="./images/Global Swiss Learning Logo.jpg" alt="Pastry Trainer Certificate" class="cert-thumb cert-logo">
+                        <h5 class="cert-title mt-2">Pastry Trainer Certificate</h5>
+                        <p class="cert-meta mb-0">Global Swiss Learning, 2025</p>
                     </div>
                 </div>
 
+
                 <div class="col">
-                    <div class="cert-card h-100 text-center">
-                        <img src="./images/Four-Seasons-Logo-2386154059.png" alt="Institute name" class="cert-logo">
-                        <h5 class="cert-title"> 5 Years Work Anniversary Certificate</h5>
+                    <div class="cert-card h-100 text-center" style="cursor: pointer;"
+                        data-bs-toggle="modal" data-bs-target="#certModal"
+                        data-full="./images/5 Year Anniversary Certificate_page-0001.jpg">
+                        <img src="./images/Four-Seasons-Logo-2386154059.png" alt="5 Years Work Anniversary Certificate" class="cert-thumb cert-logo">
+                        <h5 class="cert-title mt-2">5 Years Work Anniversary Certificate</h5>
                         <p class="cert-meta mb-0">Four Seasons Hotels and Resorts</p>
                         <p class="cert-meta">June 01, 2021</p>
                     </div>
                 </div>
 
-                <div class="col">
+
+                <!-- <div class="col">
                     <div class="cert-card h-100 text-center">
-                        <img src="./images/jumeirah-logo1.png" alt="" class="cert-logo">
-                        <h5 class="cert-title">Nr.1 Hotel in the World, Appreciation Certificate</h5>
+                        <img src="./images/Four-Seasons-Logo-2386154059.png" alt="Institute name" class="cert-thumb cert-logo">
+                        <h5 class="cert-title mt-2"> 5 Years Work Anniversary Certificate</h5>
+                        <p class="cert-meta mb-0">Four Seasons Hotels and Resorts</p>
+                        <p class="cert-meta">June 01, 2021</p>
+                    </div>
+                </div> -->
+
+                <div class="col">
+                    <div class="cert-card h-100 text-center" style="cursor: pointer;"
+                        data-bs-toggle="modal" data-bs-target="#certModal"
+                        data-full="./images/Burj Al Arab Appreciation Certificate_page-0001.jpg">
+                        <img src="./images/jumeirah-logo1.png" alt="Nr.1 Hotel in the World, Appreciation Certificate" class="cert-thumb cert-logo">
+                        <h5 class="cert-title mt-2">Nr.1 Hotel in the World, Appreciation Certificate</h5>
                         <p class="cert-meta mb-0">Burj Al Arab Hotel Dubai</p>
-                        <p class="cert-meta">November, 2001</p>
+                        <p class="cert-meta">>November, 2003</p>
                     </div>
                 </div>
+
+
+
+                <!-- <div class="col">
+                    <div class="cert-card h-100 text-center">
+                        <img src="./images/jumeirah-logo1.png" alt="" class="cert-logo">
+                        <h5 class="cert-title mt-2">Nr.1 Hotel in the World, Appreciation Certificate</h5>
+                        <p class="cert-meta mb-0">Burj Al Arab Hotel Dubai</p>
+                        <p class="cert-meta">November, 2003</p>
+                    </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -371,12 +398,38 @@
 
 
 
+    <!-- Modal (page me sirf ek baar) -->
+            <div class="modal fade" id="certModal" tabindex="-1" aria-hidden="true">
+                <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header border-0">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body pt-0">
+                            <img id="certModalImg" src="" alt="Certificate" class="img-fluid w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
 
     <script src="https://unpkg.com/lucide@latest"></script>
 <script>
     lucide.createIcons();
 </script>
 
+
+<script>
+    const modalImg = document.getElementById('certModalImg');
+    document.querySelectorAll('.cert-card[data-full]').forEach(card => {
+        card.addEventListener('click', () => {
+            modalImg.src = card.dataset.full;
+            modalImg.alt = card.querySelector('.cert-title').textContent;
+        });
+    });
+</script>
 
 <script>
     const buttons = document.querySelectorAll('.filter-btn');
