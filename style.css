@@ -560,6 +560,10 @@ h5{
     text-transform: uppercase!important;
 }
 
+.gallery-item .card{
+    border-radius: 15px;
+}
+
 .gallery-item .card-body{
     height: 90px;
 }
