@@ -21,6 +21,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
     <div class="container-fluid">
@@ -87,7 +88,7 @@
                 </div> -->
 
 
-                <div class="col">
+                <div class="col reveal">
                     <div class="cert-card h-100 text-center p-5" style="cursor: pointer;"
                         data-bs-toggle="modal" data-bs-target="#certModal"
                         data-full="./images/GSL Pastry Trainer - Oct 9 2025 - 5-28 PM_page-0001.jpg">
@@ -99,7 +100,7 @@
                 </div>
 
 
-                <div class="col">
+                <div class="col reveal" style="--d: 0.1s;">
                     <div class="cert-card h-100 text-center p-5" style="cursor: pointer;"
                         data-bs-toggle="modal" data-bs-target="#certModal"
                         data-full="./images/Burj Al Arab Appreciation Certificate_page-0001.jpg">
@@ -111,7 +112,7 @@
                 </div>
 
 
-                <div class="col">
+                <div class="col reveal" style="--d: 0.2s;">
                     <div class="cert-card h-100 text-center p-5" style="cursor: pointer;"
                         data-bs-toggle="modal" data-bs-target="#certModal"
                         data-full="./images/Certificate of Appreciation Michelin Cert.jpeg">
@@ -123,7 +124,7 @@
                 </div>
 
 
-                <div class="col"> 
+                <div class="col reveal"> 
                     <div class="cert-card h-100 text-center p-5" style="cursor: pointer;"
                         data-bs-toggle="modal" data-bs-target="#certModal"
                         data-full="./images/Certificate of Appreciation Opening Cert.jpeg">
@@ -135,7 +136,7 @@
                 </div>
 
 
-                <div class="col">
+                <div class="col reveal" style="--d: 0.1s;">
                     <div class="cert-card h-100 text-center p-5" style="cursor: pointer;"
                         data-bs-toggle="modal" data-bs-target="#certModal"
                         data-full="./images/5 Year Anniversary Certificate_page-0001.jpg">
@@ -147,7 +148,7 @@
                 </div>
 
 
-                <div class="col">
+                <div class="col reveal" style="--d: 0.2s;">
                     <div class="cert-card h-100 text-center p-5" style="cursor: pointer;"
                         data-bs-toggle="modal" data-bs-target="#certModal"
                         data-full="./images/MOQ01 2019.jpg">
@@ -158,7 +159,7 @@
                     </div>
                 </div>
 
-                <div class="col">
+                <div class="col reveal">
                     <div class="cert-card h-100 text-center p-5" style="cursor: pointer;"
                         data-bs-toggle="modal" data-bs-target="#certModal"
                         data-full="./images/cert3.jpeg">
@@ -169,7 +170,7 @@
                     </div>
                 </div>
 
-                <div class="col">
+                <div class="col reveal" style="--d: 0.1s;">
                     <div class="cert-card h-100 text-center p-5" style="cursor: pointer;"
                         data-bs-toggle="modal" data-bs-target="#certModal"
                         data-full="./images/Leadership Breakthrough  Accelerator_page-0001.jpg">
@@ -180,7 +181,7 @@
                     </div>
                 </div>
 
-                <div class="col">
+                <div class="col reveal" style="--d: 0.2s;">
                     <div class="cert-card h-100 text-center p-5" style="cursor: pointer;"
                         data-bs-toggle="modal" data-bs-target="#certModal"
                         data-full="./images/Grand Hyatt Taipei, Manager of the Quarter.jpeg">
@@ -254,5 +255,21 @@
 </script>
 
 
+<script>
+        // Light scroll reveal: elements fade in once when they enter the screen
+        (function () {
+            var els = document.querySelectorAll('.reveal');
+            if (!('IntersectionObserver' in window)) {
+                els.forEach(function (e) { e.classList.add('in'); });
+                return;
+            }
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (x) {
+                    if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); }
+                });
+            }, { threshold: 0.15 });
+            els.forEach(function (e) { io.observe(e); });
+        })();
+    </script>
 </body>
 </html>

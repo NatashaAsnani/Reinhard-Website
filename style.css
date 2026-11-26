@@ -5,6 +5,11 @@ body{
     color: #7A4A32;
 }
 
+.navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+}
+
 .card{
     background-color: #FFFFFF;
     border-color: #F0E8DC;
@@ -1051,4 +1056,26 @@ h5{
     .footer-row .small {
         font-size: 11px;
     }
+}
+
+
+/* Light scroll reveal (fade and slight rise, plays once) */
+.js .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    transition-delay: var(--d, 0s);
+}
+
+.js .reveal.in {
+    opacity: 1;
+    transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .js .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+@media print {
+    .js .reveal { opacity: 1; transform: none; }
 }
