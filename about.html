@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Reinhard Lackner</title>
+    <meta name="description" content="About Executive Pastry Chef Reinhard Lackner: his approach to pastry, his signature Sacher Cake, his career across Europe, the Middle East and Asia, and what he teaches his team.">
+    <meta name="author" content="Natasha Asnani">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Reinhard Lackner">
+    <meta property="og:title" content="Contact | Reinhard Lackner">
+    <meta property="og:description" content="About Executive Pastry Chef Reinhard Lackner: his approach to pastry, his signature Sacher Cake, his career across Europe, the Middle East and Asia, and what he teaches his team.">
+    <meta name="twitter:card" content="summary">
+    <!-- Add after hosting: <link rel="canonical" href="https://YOUR-DOMAIN/about.html"> and <meta property="og:image" content="https://YOUR-DOMAIN/images/share-image.jpg"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        /* About page (move to style.css if you prefer) */
+        .about-section-title { color: #650D12; font-weight: bold; }
+        .about-label { display: inline-block; color: #B87342; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 14px; }
+        .about-text { color: #333; line-height: 1.8; font-size: 1.05rem; }
+        .about-cream { background-color: #FAF3EC; }
+        .about-section { position: relative; overflow: hidden; }
+
+        /* Images with offset frame */
+        .about-frame { position: relative; isolation: isolate; margin: 0 18px 18px 0; }
+        .about-frame::before { content: ""; position: absolute; inset: 0; border: 2px solid #B87342; border-radius: 16px; transform: translate(18px, 18px); z-index: -1; }
+        .about-frame-alt { margin: 0 0 18px 18px; }
+        .about-frame-alt::before { transform: translate(-18px, 18px); }
+        .about-img { width: 100%; display: block; object-fit: cover; border-radius: 16px; background: #FAF3EC; box-shadow: 0 16px 36px rgba(101, 13, 18, 0.18); }
+        .about-img-portrait { aspect-ratio: 4 / 5; }
+        .about-img-wide { aspect-ratio: 4 / 3; }
+        .about-badge { position: absolute; left: -12px; bottom: 28px; background: #650D12; color: #F5EFE5; padding: 10px 20px; border-radius: 50px; font-weight: 600; box-shadow: 0 8px 20px rgba(101, 13, 18, 0.3); }
+        .about-badge i { color: #E8B98A; margin-right: 8px; }
+
+        /* Hero */
+        .about-hero-title { font-size: clamp(2.4rem, 5.5vw, 4rem); line-height: 1.1; color: #650D12; font-weight: bold; margin: 0 0 22px; }
+        .about-hero-title::before { content: "\201C"; display: block; font-size: 5rem; line-height: 0.6; color: #B87342; }
+        .about-sign { font-style: italic; color: #7A4A32; margin-top: 20px; }
+        /* .about-sign::before { content: ""; display: inline-block; width: 30px; height: 2px; background: #B87342; vertical-align: middle; margin-right: 12px; } */
+
+        /* Sacher */
+        .about-dark { background: #2B1410; color: #F5EFE5; }
+        .about-dark .about-section-title { color: #F5EFE5; }
+        .about-dark .about-text { color: #E8D7C2; }
+        .about-layers { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+        .about-layers li { color: #fff; padding: 20px 24px; border-radius: 12px; font-weight: 600; display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; border: 1px solid rgba(255, 255, 255, 0.14); background-image: linear-gradient(180deg, rgba(255,255,255,0.12), rgba(255,255,255,0)); }
+        .about-layers small { font-weight: 400; opacity: 0.85; }
+        .layer-glaze { background-color: #3A1C14; border-radius: 40px 40px 12px 12px !important; }
+        .layer-mousse { background-color: #5A2E22; }
+        .layer-apricot { background-color: #D9922F; }
+        .layer-sponge { background-color: #7A4A32; border-radius: 12px 12px 40px 40px !important; }
+
+        /* Cards */
+        .about-card { position: relative; overflow: hidden; background: #fff; border: 1px solid #eadfd3; border-radius: 16px; padding: 36px 30px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .about-card:hover { transform: translateY(-6px); box-shadow: 0 14px 30px rgba(101, 13, 18, 0.14); }
+        .about-card h3 { color: #650D12; font-weight: bold; }
+        .about-card-icon { width: 52px; height: 52px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: #FAF3EC; color: #B87342; font-size: 1.2rem; margin-bottom: 18px; }
+        .about-card-quote { position: absolute; top: 14px; right: 24px; font-size: 4.5rem; color: #B87342; opacity: 0.18; }
+        .about-card-maroon { background: #650D12; border-color: #650D12; }
+        .about-card-maroon h3 { color: #F5EFE5; }
+        .about-card-maroon .about-text { color: #E8D7C2; }
+        .about-card-maroon .about-card-icon { background: rgba(255, 255, 255, 0.12); color: #E8B98A; }
+        .about-link { color: #650D12; font-weight: 600; }
+        .about-card-maroon .about-link { color: #F5EFE5; }
+        .about-link:hover { text-decoration: underline; }
+
+        /* Journey steps */
+        .about-steps { position: relative; }
+        .about-step { height: 100%; }
+        .about-step::after { content: attr(data-num); position: absolute; right: 18px; bottom: -14px; font-size: 6rem; font-weight: bold; color: #650D12; opacity: 0.07; line-height: 1; }
+        @media (min-width: 768px) {
+            .about-steps::before { content: ""; position: absolute; top: 26px; left: 10%; right: 10%; border-top: 2px dashed #d8c3ae; }
+            .about-steps .col { position: relative; }
+        }
+
+        /* Teaching */
+        .about-statement { font-size: clamp(1.9rem, 4vw, 2.8rem); color: #650D12; font-weight: bold; line-height: 1.2; margin-bottom: 18px; }
+        .about-statement::after { content: ""; display: block; width: 70px; height: 3px; background: #B87342; margin-top: 18px; }
+
+        /* Outside the kitchen */
+        .about-leaf { position: absolute; right: 6%; top: 50%; transform: translateY(-50%) rotate(-12deg); font-size: 14rem; color: #650D12; opacity: 0.06; pointer-events: none; }
+        .about-big-line { font-size: clamp(1.4rem, 3vw, 2rem); font-style: italic; color: #650D12; max-width: 760px; line-height: 1.5; margin: 0 auto; }
+
+        /* CTA */
+        .about-cta { background: #650D12; color: #F5EFE5; border-radius: 16px; padding: 56px 24px; }
+        .about-cta h3 { color: #F5EFE5; font-weight: bold; }
+        .about-cta p { color: #E8D7C2; margin-bottom: 24px; }
+        .about-cta-btn { display: inline-block; padding: 12px 32px; border: 1px solid #F5EFE5; border-radius: 50px; color: #F5EFE5; text-decoration: none; font-weight: 600; transition: all 0.3s ease; }
+        .about-cta-btn:hover { background: #F5EFE5; color: #650D12; }
+
+        /* Scroll reveal */
+        .js .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease, transform 0.8s ease; transition-delay: var(--d, 0s); }
+        .js .reveal.in { opacity: 1; transform: none; }
+        @media (prefers-reduced-motion: reduce) {
+            .js .reveal { opacity: 1; transform: none; transition: none; }
+            .about-card:hover { transform: none; }
+        }
+
+        @media (max-width: 575px) {
+            .about-frame { margin: 0 12px 12px 0; }
+            .about-frame::before { transform: translate(12px, 12px); }
+            .about-frame-alt { margin: 0 0 12px 12px; }
+            .about-frame-alt::before { transform: translate(-12px, 12px); }
+            .about-badge { left: 8px; font-size: 0.85rem; }
+            .about-card { padding: 28px 22px; }
+            .about-leaf { font-size: 9rem; }
+        }
+    </style>
+    <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <nav aria-label="Main navigation" class="navbar navbar-expand-lg navbar-light" style="background-color: #FFFDF9;">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="./images/Gemini_Generated_Image_94er6u94er6u94er-removebg-preview.png" alt="Reinhard Lackner, Executive Pastry Chef" width="180px">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="index.html" style="color: #7A4A32 !important;">Home</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="about.html" style="color: #7A4A32 !important;">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="experience.html" style="color: #7A4A32 !important;">Experience</a></li>
+                            <li class="nav-item"><a class="nav-link" href="gallery.html" style="color: #7A4A32 !important;">Gallery</a></li>
+                            <li class="nav-item"><a class="nav-link" href="milestones.html" style="color: #7A4A32 !important;">Milestones</a></li>
+                            <li class="nav-item"><a class="nav-link" href="testimonials.html" style="color: #7A4A32 !important;">My Gratitude</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html" style="color: #7A4A32 !important;">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <section class="about-section py-5 mt-4">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7 reveal">
+                    <span class="about-label">About Chef Reinhard</span>
+                    <h1 class="about-hero-title">I don’t blindly follow recipes.</h1>
+                    <p class="about-text">When creating new desserts and cakes, I draw on technical expertise, ingredient knowledge, and creativity to develop original creations.</p>
+                    <p class="about-text mb-0">This approach has taken me through hotels, resorts and large-scale production kitchens across Europe, the Middle East and Asia.</p>
+                    <p class="about-sign">Reinhard Lackner, Executive Pastry Chef</p>
+                </div>
+                <div class="col-lg-5 reveal" style="--d: 0.15s;">
+                    <!-- Chef's own photo: save as images/chef-portrait-2.jpg -->
+                    <div class="about-frame">
+                        <img src="./images/Reinhard Lackner.jpg" alt="Portrait of Chef Reinhard Lackner" class="about-img about-img-portrait" loading="lazy" decoding="async">
+                        <span class="about-badge"><i class="fa-solid fa-award" aria-hidden="true"></i>Executive Pastry Chef</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signature creation -->
+    <section class="about-dark about-section py-5">
+        <div class="container py-4">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 reveal">
+                    <span class="about-label">Signature Creation</span>
+                    <h2 class="about-section-title mb-3">My Sacher Cake</h2>
+                    <p class="about-text mb-0">My version of the renowned Sacher Cake combines a moist chocolate sponge with apricot confit, enhanced by notes of passion fruit and vanilla. Layers of luxurious 65% dark chocolate mousse and a glossy dark chocolate glaze bring depth and richness, creating an exceptional flavor pairing that elevates this classic dessert.</p>
+                </div>
+                <div class="col-lg-6">
+                    <ol class="about-layers" aria-label="Layers of the Sacher Cake, from top to bottom">
+                        <li class="layer-glaze reveal" style="--d: 0.6s;">Dark chocolate glaze <small>glossy finish</small></li>
+                        <li class="layer-mousse reveal" style="--d: 0.4s;">Dark chocolate mousse <small>65% dark chocolate</small></li>
+                        <li class="layer-apricot reveal" style="--d: 0.2s;">Apricot confit <small>passion fruit and vanilla</small></li>
+                        <li class="layer-sponge reveal" style="--d: 0s;">Chocolate sponge <small>moist</small></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roots and highlight -->
+    <section class="py-5 my-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-6 reveal">
+                    <div class="about-card h-100">
+                        <i class="fa-solid fa-quote-right about-card-quote" aria-hidden="true"></i>
+                        <div class="about-card-icon"><i class="fa-solid fa-utensils" aria-hidden="true"></i></div>
+                        <h3>Lessons from the Family Restaurant</h3>
+                        <p class="about-text mb-0">The calmness my parents demonstrated, even in the busiest situations, taught me the importance of maintaining focus on quality and customer service.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 reveal" style="--d: 0.15s;">
+                    <div class="about-card about-card-maroon h-100">
+                        <div class="about-card-icon"><i class="fa-solid fa-star" aria-hidden="true"></i></div>
+                        <h3>A Career Highlight</h3>
+                        <p class="about-text">Working at the Burj Al Arab Hotel in Dubai remains one of the most memorable moments of my career.</p>
+                        <a href="milestones.html" class="about-link">View the appreciation certificate <i class="fa-solid fa-arrow-right ms-1" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Three regions -->
+    <section class="about-cream about-section py-5">
+        <div class="container py-3">
+            <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-5 reveal">
+                <div>
+                    <span class="about-label">The Journey</span>
+                    <h2 class="about-section-title m-0">A Career Across Three Regions</h2>
+                </div>
+                <div class="dishes-btn">
+                    <a href="experience.html">
+                        <button>See Full Experience
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-3 g-4 about-steps">
+                <div class="col reveal">
+                    <div class="about-card about-step" data-num="01">
+                        <div class="about-card-icon"><i class="fa-solid fa-landmark" aria-hidden="true"></i></div>
+                        <h3>Europe</h3>
+                        <p class="about-text mb-0">Where it began: an apprenticeship in Austria, followed by pastry kitchens in Switzerland, Vienna and Germany, and later Athens.</p>
+                    </div>
+                </div>
+                <div class="col reveal" style="--d: 0.15s;">
+                    <div class="about-card about-step" data-num="02">
+                        <div class="about-card-icon"><i class="fa-solid fa-mosque" aria-hidden="true"></i></div>
+                        <h3>Middle East</h3>
+                        <p class="about-text mb-0">Jeddah and Dubai, including my time at the Burj Al Arab Hotel.</p>
+                    </div>
+                </div>
+                <div class="col reveal" style="--d: 0.3s;">
+                    <div class="about-card about-step" data-num="03">
+                        <div class="about-card-icon"><i class="fa-solid fa-city" aria-hidden="true"></i></div>
+                        <h3>Asia</h3>
+                        <p class="about-text mb-0">Singapore, Taipei, Shenyang, Seoul, Macau and Hong Kong: hotel pre-openings, large teams and large-scale production.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teaching -->
+    <section class="about-section py-5 my-4">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 reveal">
+                    <!-- Photo with two colleagues: save as images/chef-with-colleagues.jpg -->
+                    <div class="about-frame about-frame-alt">
+                        <img src="./images/Team Picture.jpg" alt="Chef Reinhard's Team" class="about-img about-img-wide" loading="lazy" decoding="async">
+                    </div>
+                </div>
+                <div class="col-lg-6 reveal" style="--d: 0.15s;">
+                    <span class="about-label">What I Teach My Team</span>
+                    <p class="about-statement">Master pastry from the basics.</p>
+                    <p class="about-text mb-0">Understanding fundamental pastry and bakery techniques is the most important step in building your skills and confidence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outside the kitchen -->
+    <!-- <section class="about-cream about-section py-5">
+        <i class="fa-solid fa-leaf about-leaf" aria-hidden="true"></i>
+        <div class="container text-center py-4 reveal">
+            <span class="about-label">Outside the Kitchen</span>
+            <p class="about-big-line mb-0">I love spending time outdoors, connecting with nature and enjoying its beauty.</p>
+        </div>
+    </section> -->
+
+    <!-- Closing block -->
+    <!-- <section class="py-5 mt-4">
+        <div class="container">
+            <div class="about-cta text-center reveal">
+                <h3>Let's create something together</h3>
+                <p>For collaborations, consulting, events or opportunities.</p>
+                <a href="contact.html" class="about-cta-btn">Get in Touch</a>
+            </div>
+        </div>
+    </section> -->
+
+    <footer class="mt-5">
+        <div class="container-fluid">
+            <div class="row footer-row">
+                <div class="col-12 text-center">
+                    <img src="./images/footer-logo.png" alt="Reinhard Lackner logo" width="150px" class="logo-light" loading="lazy" decoding="async">
+                    <p class="mt-2 mb-3" style="color: #E8D7C2 !important;">Executive Pastry Chef</p>
+                    <div>
+                        <a href="https://www.facebook.com/pastrychefreinhardlackner" target="_blank" rel="noopener" class="mx-2 text-decoration-none" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                        <a href="https://www.linkedin.com/in/pastrychefreinhardlackner" target="_blank" rel="noopener" class="mx-2 text-decoration-none" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/reinhardlackner" target="_blank" rel="noopener" class="mx-2 text-decoration-none" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="https://x.com/reinilac" target="_blank" rel="noopener" class="mx-2 text-decoration-none" aria-label="X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+                <!-- Copyright Row -->
+                <div class="row mt-4">
+                    <div class="col-12 border-top border-white pt-3 d-flex flex-column flex-md-row justify-content-between align-items-center gap-1">
+                        <p class="small mb-0">&copy; 2026 Reinhard Lackner. All rights reserved.</p>
+                        <p class="small mb-0" style="opacity: 0.7;">Designed &amp; developed by <a href="https://natashaasnani-portfolio-website.netlify.app/" target="_blank" rel="noopener">Natasha Asnani</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function () {
+            var els = document.querySelectorAll('.reveal');
+            if (!('IntersectionObserver' in window)) {
+                els.forEach(function (e) { e.classList.add('in'); });
+                return;
+            }
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (x) {
+                    if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); }
+                });
+            }, { threshold: 0.15 });
+            els.forEach(function (e) { io.observe(e); });
+        })();
+    </script>
+</body>
+</html>
